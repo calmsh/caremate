@@ -1,0 +1,54 @@
+ 앙상블 모델에 로지스틱, 랜덤포레스트, 그랜디언부스팅만 넣었을 때
+--- clinical_HE(고혈압)  질환 최적 하이퍼파라미터 튜닝 시작 ---Fitting 5 folds for each of 20 candidates, totalling 100 fits
+[최적 파라미터]: {'ensemble__gb__learning_rate': np.float64(0.021282315805420053), 'ensemble__lr__C': np.float64(7.319987722668247), 'ensemble__rf__max_depth': 10, 'ensembleㄹ__rf__n_estimators': 87}
+[최고 ROC-AUC 점수]: 0.8371
+
+--- clinical_DB(당뇨) 질환 최적 하이퍼파라미터 튜닝 시작 ---
+Fitting 5 folds for each of 20 candidates, totalling 100 fits
+[최적 파라미터]: {'model__C': np.float64(0.02557531682028657), 'model__penalty': 'l2'}
+[최고 ROC-AUC 점수]: 0.8027
+
+--- clinical_DY(이상지혈증) 질환 최적 하이퍼파라미터 튜닝 시작 ---
+Fitting 5 folds for each of 20 candidates, totalling 100 fits
+[최적 파라미터]: {'ensemble__gb__learning_rate': np.float64(0.01687770422304368), 'ensemble__lr__C': np.float64(9.193204020787821), 'ensemble__rf__max_depth': 10, 'ensemble__rf__n_estimators': 153}
+[최고 ROC-AUC 점수]: 0.7249
+
+--- clinical_ST(뇌졸중) 질환 최적 하이퍼파라미터 튜닝 시작 ---
+Fitting 5 folds for each of 20 candidates, totalling 100 fits
+[최적 파라미터]: {'model__C': np.float64(0.02557531682028657), 'model__penalty': 'l2'}
+[최고 ROC-AUC 점수]: 0.8049
+
+앙상블 모델에 전부(로지스틱, 랜덤포레스트,그랜디언부스팅, XGB, LGBM,) 다 넣었을 때
+--- clinical_HE(고혈압) 고성능 모델 추가 랜덤 서치 시작 (변수: 11개) ---
+Fitting 5 folds for each of 30 candidates, totalling 150 fits
+
+[최종 최적 파라미터 - clinical_HE]:
+{'ensemble__gb__learning_rate': np.float64(0.08217295211648731), 'ensemble__lgbm__learning_rate': np.float64(0.033598491974895575), 'ensemble__lgbm__n_estimators': 241, 'ensemble__lr__C': np.float64(5.037955963643907), 'ensemble__rf__max_depth': 10, 'ensemble__rf__n_estimators': 158, 'ensemble__xgb__learning_rate': np.float64(0.052754101835854966), 'ensemble__xgb__n_estimators': 141}
+[최고 ROC-AUC 점수]: 0.8349
+
+--- clinical_DB(당뇨) 고성능 모델 추가 랜덤 서치 시작 (변수: 9개) ---
+Fitting 5 folds for each of 30 candidates, totalling 150 fits
+
+[최종 최적 파라미터 - clinical_DB]:
+{'model__C': np.float64(0.035388521115218396), 'model__penalty': 'l2'}
+[최고 ROC-AUC 점수]: 0.8026
+
+--- clinical_DY(이상지혈증) 고성능 모델 추가 랜덤 서치 시작 (변수: 10개) ---
+Fitting 5 folds for each of 30 candidates, totalling 150 fits
+
+[최종 최적 파라미터 - clinical_DY]:
+{'ensemble__gb__learning_rate': np.float64(0.031233911067827615), 'ensemble__lgbm__learning_rate': np.float64(0.028182496720710062), 'ensemble__lgbm__n_estimators': 120, 'ensemble__lr__C': np.float64(6.274815096277165), 'ensemble__rf__max_depth': 20, 'ensemble__rf__n_estimators': 101, 'ensemble__xgb__learning_rate': np.float64(0.01070663052197174), 'ensemble__xgb__n_estimators': 188}
+[최고 ROC-AUC 점수]: 0.7208
+
+--- clinical_ST(뇌졸) 고성능 모델 추가 랜덤 서치 시작 (변수: 8개) ---
+Fitting 5 folds for each of 30 candidates, totalling 150 fits
+
+[최종 최적 파라미터 - clinical_ST]:
+{'model__C': np.float64(0.035388521115218396), 'model__penalty': 'l2'}
+[최고 ROC-AUC 점수]: 0.8048
+
+
+
+
+
+
