@@ -15,7 +15,7 @@ pip install -r requirements.txt
 
 ## 실행 방법
 ```bash
-streamlit run app4.py
+streamlit run app5.py
 ```
 
 ## 필수 파일
