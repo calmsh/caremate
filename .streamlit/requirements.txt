@@ -1,8 +1,0 @@
-streamlit
-pandas
-numpy
-joblib
-langchain-openai
-edge-tts
-streamlit-mic-recorder
-openai
